@@ -25,13 +25,13 @@ export default function Hero() {
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
 
 
-          <button className="w-full sm:w-auto px-6 py-3 rounded-full border border-white/20 bg-white/10 text-white hover:bg-white/20 transition">
-            View Projects
-          </button>
+          <a href="#about" className="w-full sm:w-auto px-6 py-3 rounded-full border border-white/20 bg-white/10 text-white hover:bg-white/20 transition">
+            About Me
+          </a>
 
-          <button className="w-full sm:w-auto px-6 py-3 rounded-full border border-[#00A19B]/40 text-[#00A19B] bg-[#00A19B]/10 hover:bg-[#00A19B]/20 transition">
-            Contact Me
-          </button>
+          <a href="#projects" className="w-full sm:w-auto px-6 py-3 rounded-full border border-[#00A19B]/40 text-[#00A19B] bg-[#00A19B]/10 hover:bg-[#00A19B]/20 transition">
+            My Project
+          </a>
 
         </div>
 
