@@ -23,13 +23,13 @@ export default function Footer() {
 
         {/* RIGHT - SOCIAL */}
         <div className="flex gap-4">
-          <a href="#" className="hover:text-[#00A19B] transition text-white/70">
+          <a href="https://github.com/codingpertama" className="hover:text-[#00A19B] transition text-white/70">
             GitHub
           </a>
-          <a href="#" className="hover:text-[#00A19B] transition text-white/70">
+          <a href="https://www.linkedin.com/in/rafa-hafiz-iqbal-sugarda-04010a32b/" className="hover:text-[#00A19B] transition text-white/70">
             LinkedIn
           </a>
-          <a href="#" className="hover:text-[#00A19B] transition text-white/70">
+          <a href="https://www.instagram.com/rapa.pdf/" className="hover:text-[#00A19B] transition text-white/70">
             Instagram
           </a>
         </div>

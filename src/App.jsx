@@ -9,6 +9,7 @@ import petshop from "./assets/petshop.png"
 import bogor from "./assets/bogor.png"
 import elektronik from "./assets/elektronik.png"
 import Footer from "./components/Footer"
+import Contact from "./components/Contact"
 
 function App() {
 
@@ -122,6 +123,8 @@ function App() {
           <ProjectCard key={index} {...project} />
         ))}
       </div>
+
+      <Contact/>
 
         <Footer/>
     </div>
