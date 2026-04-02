@@ -1,4 +1,4 @@
-import me from "../assets/rafa_mercy.jpeg";
+import me from "../assets/profesional.png";
 
 export default function About() {
     return (
@@ -37,7 +37,7 @@ export default function About() {
                     {/* INNER CARD */}
                     <div className="relative bg-black rounded-xl p-2 border border-white/10">
 
-                        <img src={me} alt="about" className="w-[280px] md:w-[360px] rounded-lg object-cover brightness-250" />
+                        <img src={me} alt="about" className="w-[280px] md:w-[360px] rounded-lg object-cover" />
 
                     </div>
 

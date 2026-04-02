@@ -8,6 +8,7 @@ import ProjectCard from "./components/ProjectCard"
 import petshop from "./assets/petshop.png"
 import bogor from "./assets/bogor.png"
 import elektronik from "./assets/elektronik.png"
+import Footer from "./components/Footer"
 
 function App() {
 
@@ -122,6 +123,7 @@ function App() {
         ))}
       </div>
 
+        <Footer/>
     </div>
   )
 }
