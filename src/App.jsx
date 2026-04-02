@@ -38,12 +38,20 @@ function App() {
   ];
 
 
-  const images = [
+  const hardSkills = [
     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+  ];
+
+  const softSkills = [
+    "https://cdn-icons-png.flaticon.com/512/3135/3135715.png", // teamwork
+    "https://cdn-icons-png.flaticon.com/512/4140/4140048.png", // communication
+    "https://cdn-icons-png.flaticon.com/512/190/190411.png", // problem solving
+    "https://cdn-icons-png.flaticon.com/512/921/921347.png", // creativity
+    "https://cdn-icons-png.flaticon.com/512/1828/1828919.png" // discipline
   ];
 
   return (
@@ -67,40 +75,82 @@ function App() {
       />
 
       {/* STACK SECTION */}
-      <section className="flex flex-col items-center justify-center py-20 bg-black border-t border-[#00A19B]/20">
+      {/* STACK SECTION */}
+<section className="flex flex-col items-center justify-center py-20 bg-black border-t border-[#00A19B]/20">
 
-        {/* TEXT AJAKAN */}
-        <div className="relative flex justify-center mb-10">
-          <h2 className="text-sm md:text-base font-light text-white/50 animate-bounce text-center">
-            Click ↓
-          </h2>
-        </div>
+  {/* TITLE */}
+  <h2 className="text-xl font-semibold text-center mb-10">
+    Skills Overview
+  </h2>
 
-        {/* STACK */}
-        <div className="w-[320px] h-[320px] md:w-[420px] md:h-[420px]">
-          <Stack
-            randomRotation={false}
-            sensitivity={200}
-            sendToBackOnClick={true}
-            cards={images.map((src, i) => (
-              <div
-                key={i}
-                className="w-full h-full flex items-center justify-center bg-gradient-to-br from-[#1111] to-[#000] rounded-xl border border-[#00A19B]/20 shadow-lg"
-              >
-                <img
-                  src={src}
-                  alt={`card-${i + 1}`}
-                  className="w-40 h-40 object-contain"
-                />
-              </div>
-            ))}
-            autoplay={false}
-            autoplayDelay={3000}
-            pauseOnHover={false}
-          />
-        </div>
+  <div className="flex flex-col md:flex-row items-center justify-center gap-20">
 
-      </section>
+    {/* HARD SKILLS */}
+    <div className="flex flex-col items-center">
+      <h3 className="text-sm text-white/50 mb-5">Hard Skills</h3>
+
+      <div className="w-[250px] h-[250px] md:w-[320px] md:h-[320px]">
+        <Stack
+          randomRotation={false}
+          sensitivity={200}
+          sendToBackOnClick={true}
+          autoplay={false}
+          cards={[
+            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
+            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+          ].map((src, i) => (
+            <div
+              key={i}
+              className="w-full h-full flex items-center justify-center bg-zinc-900 rounded-xl border border-[#00A19B]/20 shadow-lg"
+            >
+              <img
+                src={src}
+                alt={`hard-${i}`}
+                className="w-24 h-24 object-contain"
+              />
+            </div>
+          ))}
+        />
+      </div>
+    </div>
+
+    {/* SOFT SKILLS */}
+    <div className="flex flex-col items-center">
+      <h3 className="text-sm text-white/50 mb-5">Soft Skills</h3>
+
+      <div className="w-[250px] h-[250px] md:w-[320px] md:h-[320px]">
+        <Stack
+          randomRotation={false}
+          sensitivity={200}
+          sendToBackOnClick={true}
+          autoplay={false}
+          cards={[
+            "https://cdn-icons-png.flaticon.com/512/3135/3135715.png", // teamwork
+            "https://cdn-icons-png.flaticon.com/512/4140/4140048.png", // communication
+            "https://cdn-icons-png.flaticon.com/512/190/190411.png", // problem solving
+            "https://cdn-icons-png.flaticon.com/512/921/921347.png", // creativity
+            "https://cdn-icons-png.flaticon.com/512/1828/1828919.png" // discipline
+          ].map((src, i) => (
+            <div
+              key={i}
+              className="w-full h-full flex items-center justify-center bg-zinc-900 rounded-xl border border-blue-400/20 shadow-lg"
+            >
+              <img
+                src={src}
+                alt={`soft-${i}`}
+                className="w-20 h-20 object-contain"
+              />
+            </div>
+          ))}
+        />
+      </div>
+    </div>
+
+  </div>
+</section>
       <ScrollVelocity
         texts={['Education']}
         velocity={50}
@@ -124,9 +174,9 @@ function App() {
         ))}
       </div>
 
-      <Contact/>
+      <Contact />
 
-        <Footer/>
+      <Footer />
     </div>
   )
 }
