@@ -1,5 +1,83 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+:root {
+  /* Mercedes AMG Petronas Colors */
+  --petronas-teal: #00D2BE;
+  --petronas-teal-dark: #00A19B;
+  --mercedes-silver: #C0C0C0;
+  --mercedes-silver-light: #E8E8E8;
+  --mercedes-black: #0D0D0D;
+  --carbon-black: #1A1A1A;
+  --accent-red: #FF1801;
+}
 
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Titillium Web', sans-serif;
+  background-color: var(--mercedes-black);
+  color: white;
+}
+
+/* Orbitron for headings */
+.font-orbitron {
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* Titillium Web for body */
+.font-titillium {
+  font-family: 'Titillium Web', sans-serif;
+}
+
+/* Custom scrollbar - Mercedes style */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--mercedes-black);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--petronas-teal);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--petronas-teal-dark);
+}
+
+/* Racing stripe animation */
+@keyframes racing-stripe {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.racing-stripe-animation {
+  animation: racing-stripe 3s ease-in-out infinite;
+}
+
+/* Glow effect */
+.glow-teal {
+  box-shadow: 0 0 20px rgba(0, 210, 190, 0.3),
+              0 0 40px rgba(0, 210, 190, 0.2),
+              0 0 60px rgba(0, 210, 190, 0.1);
+}
+
+.text-glow-teal {
+  text-shadow: 0 0 10px rgba(0, 210, 190, 0.5),
+               0 0 20px rgba(0, 210, 190, 0.3);
+}
+
+/* Selection color */
+::selection {
+  background: var(--petronas-teal);
+  color: var(--mercedes-black);
 }
