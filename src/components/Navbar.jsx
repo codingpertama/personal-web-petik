@@ -9,6 +9,7 @@ export default function Navbar() {
           <li><a href="#skills" className="hover:text-[#00A19B]">Skills</a></li>
           <li><a href="#education" className="hover:text-[#00A19B]">Education</a></li>
           <li><a href="#projects" className="hover:text-[#00A19B]">Projects</a></li>
+          <li><a href="#certificate" className="hover:text-[#00A19B]">Certificates</a></li>
         </ul>
       </div>
     </nav>

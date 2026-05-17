@@ -5,9 +5,7 @@ import Navbar from "./components/Navbar"
 import ScrollVelocity from "./components/ScrollVelocity"
 import Education from "./components/Education"
 import ProjectCard from "./components/ProjectCard"
-import petshop from "./assets/petshop.png"
-import bogor from "./assets/bogor.png"
-import elektronik from "./assets/elektronik.png"
+import Certificate from "./components/certificate"
 import Footer from "./components/Footer"
 import Contact from "./components/Contact"
 
@@ -15,25 +13,58 @@ function App() {
 
   const projects = [
     {
-      title: "Website Petshop",
-      desc: "Website untuk membeli makanan hewan peliharaan yang terhubung dengan whatsapp.",
-      image: petshop,
-      tech: ["HTML", "CSS"],
-      link: "https://codingpertama.github.io/webshop.github.io/"
+      title: "CeritaKita",
+      desc: "Website fullstack bertema blogger yang dibangun menggunakan Laravel dan Bootstrap, lengkap dengan fitur autentikasi dan manajemen konten.",
+      image: "/CeritaKita.png",
+      tech: ["PHP", "Laravel", "Bootstrap", "MySQL"],
+      link: null,
+      github: "https://github.com/codingpertama/CeritaKita",
+      color: "#7C3AED"
     },
     {
-      title: "Website Artikel Kota Bogor",
-      desc: "Website untuk menampilkan informasi tentang kota Bogor.",
-      image: bogor,
-      tech: ["HTML", "CSS"],
-      link: "https://codingpertama.github.io/projectbogor/"
+      title: "Local AI Chat",
+      desc: "Aplikasi chat AI lokal berbasis web yang memungkinkan percakapan dengan model AI tanpa API eksternal, menjaga privasi penuh pengguna.",
+      image: "/local-ai-chat.png",
+      tech: ["TypeScript", "React", "Vite", "Ollama", "Tailwind CSS"],
+      link: null,
+      github: "https://github.com/codingpertama/local-ai-chat",
+      color: "#0EA5E9"
     },
     {
-      title: "Website Elektronik",
-      desc: "Website untuk menampilkan Produk elektronik.",
-      image: elektronik,
-      tech: ["HTML", "CSS"],
-      link: "https://codingpertama.github.io/el-singko/"
+      title: "Platzi Fake Store",
+      desc: "Web e-commerce yang memanfaatkan Platzi Fake Store API, dibangun dengan React dan Tailwind CSS untuk menampilkan produk secara dinamis.",
+      image: "/platzi.png",
+      tech: ["JavaScript", "React", "Tailwind CSS", "REST API"],
+      link: "https://platzi-rho.vercel.app",
+      github: "https://github.com/codingpertama/platzi",
+      color: "#10B981"
+    },
+    {
+      title: "TixID",
+      desc: "Aplikasi pemesanan tiket bioskop berbasis web terinspirasi dari TIX ID, dengan fitur pemilihan kursi, pembayaran, QR code, dan multi-role (Admin, Staff, User).",
+      image: "/tixid.png",
+      tech: ["PHP", "Laravel", "Blade", "TailwindCSS", "MySQL"],
+      link: null,
+      github: "https://github.com/codingpertama/tixid",
+      color: "#F59E0B"
+    },
+    {
+      title: "Wordpedia",
+      desc: "Aplikasi React sederhana yang memanfaatkan Dictionary API untuk menampilkan definisi, fonetik, dan contoh penggunaan kata dalam bahasa Inggris.",
+      image: "/wordpedia.png",
+      tech: ["JavaScript", "React", "Dictionary API"],
+      link: "https://wordpedia-two.vercel.app",
+      github: "https://github.com/codingpertama/Wordpedia",
+      color: "#EC4899"
+    },
+    {
+      title: "rapscode",
+      desc: "Website portfolio personal yang dibangun dengan React, Vite, GSAP, Framer Motion untuk tampilan modern dan animasi premium.",
+      image: "/rapscode.png",
+      tech: ["JavaScript", "React", "GSAP", "Framer Motion"],
+      link: "https://rapscode.vercel.app",
+      github: "https://github.com/codingpertama/rapscode",
+      color: "#00A19B"
     }
   ];
 
@@ -76,81 +107,81 @@ function App() {
 
       {/* STACK SECTION */}
       {/* STACK SECTION */}
-<section className="flex flex-col items-center justify-center py-20 bg-black border-t border-[#00A19B]/20">
+      <section className="flex flex-col items-center justify-center py-20 bg-black border-t border-[#00A19B]/20">
 
-  {/* TITLE */}
-  <h2 className="text-xl font-semibold text-center mb-10">
-    Skills Overview
-  </h2>
+        {/* TITLE */}
+        <h2 className="text-xl font-semibold text-center mb-10">
+          Skills Overview
+        </h2>
 
-  <div className="flex flex-col md:flex-row items-center justify-center gap-20">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-20">
 
-    {/* HARD SKILLS */}
-    <div className="flex flex-col items-center">
-      <h3 className="text-sm text-white/50 mb-5">Hard Skills</h3>
+          {/* HARD SKILLS */}
+          <div className="flex flex-col items-center">
+            <h3 className="text-sm text-white/50 mb-5">Hard Skills</h3>
 
-      <div className="w-[250px] h-[250px] md:w-[320px] md:h-[320px]">
-        <Stack
-          randomRotation={false}
-          sensitivity={200}
-          sendToBackOnClick={true}
-          autoplay={false}
-          cards={[
-            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
-            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-          ].map((src, i) => (
-            <div
-              key={i}
-              className="w-full h-full flex items-center justify-center bg-zinc-900 rounded-xl border border-[#00A19B]/20 shadow-lg"
-            >
-              <img
-                src={src}
-                alt={`hard-${i}`}
-                className="w-24 h-24 object-contain"
+            <div className="w-[250px] h-[250px] md:w-[320px] md:h-[320px]">
+              <Stack
+                randomRotation={false}
+                sensitivity={200}
+                sendToBackOnClick={true}
+                autoplay={false}
+                cards={[
+                  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+                  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+                  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+                  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
+                  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                ].map((src, i) => (
+                  <div
+                    key={i}
+                    className="w-full h-full flex items-center justify-center bg-zinc-900 rounded-xl border border-[#00A19B]/20 shadow-lg"
+                  >
+                    <img
+                      src={src}
+                      alt={`hard-${i}`}
+                      className="w-24 h-24 object-contain"
+                    />
+                  </div>
+                ))}
               />
             </div>
-          ))}
-        />
-      </div>
-    </div>
+          </div>
 
-    {/* SOFT SKILLS */}
-    <div className="flex flex-col items-center">
-      <h3 className="text-sm text-white/50 mb-5">Soft Skills</h3>
+          {/* SOFT SKILLS */}
+          <div className="flex flex-col items-center">
+            <h3 className="text-sm text-white/50 mb-5">Soft Skills</h3>
 
-      <div className="w-[250px] h-[250px] md:w-[320px] md:h-[320px]">
-        <Stack
-          randomRotation={false}
-          sensitivity={200}
-          sendToBackOnClick={true}
-          autoplay={false}
-          cards={[
-            "https://cdn-icons-png.flaticon.com/512/3135/3135715.png", // teamwork
-            "https://cdn-icons-png.flaticon.com/512/4140/4140048.png", // communication
-            "https://cdn-icons-png.flaticon.com/512/190/190411.png", // problem solving
-            "https://cdn-icons-png.flaticon.com/512/921/921347.png", // creativity
-            "https://cdn-icons-png.flaticon.com/512/1828/1828919.png" // discipline
-          ].map((src, i) => (
-            <div
-              key={i}
-              className="w-full h-full flex items-center justify-center bg-zinc-900 rounded-xl border border-blue-400/20 shadow-lg"
-            >
-              <img
-                src={src}
-                alt={`soft-${i}`}
-                className="w-20 h-20 object-contain"
+            <div className="w-[250px] h-[250px] md:w-[320px] md:h-[320px]">
+              <Stack
+                randomRotation={false}
+                sensitivity={200}
+                sendToBackOnClick={true}
+                autoplay={false}
+                cards={[
+                  "https://cdn-icons-png.flaticon.com/512/3135/3135715.png", // teamwork
+                  "https://cdn-icons-png.flaticon.com/512/4140/4140048.png", // communication
+                  "https://cdn-icons-png.flaticon.com/512/190/190411.png", // problem solving
+                  "https://cdn-icons-png.flaticon.com/512/921/921347.png", // creativity
+                  "https://cdn-icons-png.flaticon.com/512/1828/1828919.png" // discipline
+                ].map((src, i) => (
+                  <div
+                    key={i}
+                    className="w-full h-full flex items-center justify-center bg-zinc-900 rounded-xl border border-blue-400/20 shadow-lg"
+                  >
+                    <img
+                      src={src}
+                      alt={`soft-${i}`}
+                      className="w-20 h-20 object-contain"
+                    />
+                  </div>
+                ))}
               />
             </div>
-          ))}
-        />
-      </div>
-    </div>
+          </div>
 
-  </div>
-</section>
+        </div>
+      </section>
       <ScrollVelocity
         texts={['Education']}
         velocity={50}
@@ -168,11 +199,20 @@ function App() {
       />
 
       {/* Grid */}
-      <div className="grid md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-6 pb-16 max-w-7xl mx-auto">
         {projects.map((project, index) => (
           <ProjectCard key={index} {...project} />
         ))}
       </div>
+
+      <ScrollVelocity
+        texts={['Certificates']}
+        velocity={50}
+        className="text-[#00A19B]"
+        parallaxClassName="bg-black py-10"
+      />
+
+      <Certificate />
 
       <Contact />
 

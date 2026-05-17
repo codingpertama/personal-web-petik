@@ -29,7 +29,7 @@ export default function Footer() {
           <a href="https://www.linkedin.com/in/rafa-hafiz-iqbal-sugarda-04010a32b/" className="hover:text-[#00A19B] transition text-white/70">
             LinkedIn
           </a>
-          <a href="https://www.instagram.com/rapa.pdf/" className="hover:text-[#00A19B] transition text-white/70">
+          <a href="https://www.instagram.com/rapa.svg/" className="hover:text-[#00A19B] transition text-white/70">
             Instagram
           </a>
         </div>
