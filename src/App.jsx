@@ -5,7 +5,7 @@ import Navbar from "./components/Navbar"
 import ScrollVelocity from "./components/ScrollVelocity"
 import Education from "./components/Education"
 import ProjectCard from "./components/ProjectCard"
-import Certificate from "./components/certificate"
+import Certificate from "./components/Certificate"
 import Footer from "./components/Footer"
 import Contact from "./components/Contact"
 
